@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://crgunkoh1v34v"]
+
+[ext_resource type="PackedScene" uid="uid://dncc0wawa4ifc" path="res://scenes/player.tscn" id="1_bswci"]
+[ext_resource type="Texture2D" uid="uid://bm2yxu1ovdsab" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/snowMid.png" id="2_rus8k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xbjy"]
+size = Vector2(73, 71)
+
+[node name="Level1" type="Node2D" unique_id=1784405643]
+
+[node name="player" parent="." unique_id=644413714 instance=ExtResource("1_bswci")]
+position = Vector2(181, 149)
+
+[node name="chao" type="StaticBody2D" parent="." unique_id=2102602863]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao" unique_id=445046845]
+position = Vector2(-9.5, 299.5)
+shape = SubResource("RectangleShape2D_5xbjy")
+
+[node name="Sprite2D" type="Sprite2D" parent="chao" unique_id=1520200377]
+position = Vector2(231.50002, 299.5)
+scale = Vector2(7.9285707, 1.0142857)
+texture = ExtResource("2_rus8k")
