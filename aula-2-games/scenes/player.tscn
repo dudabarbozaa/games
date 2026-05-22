@@ -1,19 +1,89 @@
 [gd_scene format=3 uid="uid://dncc0wawa4ifc"]
 
 [ext_resource type="Script" uid="uid://d25ndkt2qsinj" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://daamrkbirb68w" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_front.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://djhlal8fsj5c3" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_stand.png" id="2_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://cdogkqe57o58e" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_jump.png" id="3_oprun"]
+[ext_resource type="Texture2D" uid="uid://b226xvl45xb3o" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk01.png" id="4_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://dxwpuam3o5jfx" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk02.png" id="5_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://3bcjadcdp3pm" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk03.png" id="6_fulsm"]
+[ext_resource type="Texture2D" uid="uid://rit7gq485udp" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk04.png" id="7_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://b1lmotdfalx3y" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk05.png" id="8_60mlk"]
+[ext_resource type="Texture2D" uid="uid://c3f48qhaw0eor" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk06.png" id="9_i4ail"]
+[ext_resource type="Texture2D" uid="uid://dii8gyo5lmy22" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk07.png" id="10_a38lo"]
+[ext_resource type="Texture2D" uid="uid://b4kt2uv1ndyve" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk08.png" id="11_4ni07"]
+[ext_resource type="Texture2D" uid="uid://vhx3skj75rsk" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk09.png" id="12_l71n6"]
+[ext_resource type="Texture2D" uid="uid://c8qfqjp2h8s4n" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk10.png" id="13_ke2ow"]
+[ext_resource type="Texture2D" uid="uid://b0oftauej3ux3" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk11.png" id="14_ujl30"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
 radius = 30.0
 height = 86.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_31cv2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_f1ej7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oprun")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a8ls1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qfm1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fulsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4r5pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_60mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i4ail")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a38lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4ni07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_l71n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ke2ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ujl30")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 20.0
+}]
+
 [node name="player" type="CharacterBody2D" unique_id=644413714]
 script = ExtResource("1_g2els")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2072079753]
-texture = ExtResource("2_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1028740298]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=266827663]
 shape = SubResource("CapsuleShape2D_dqkch")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=390229564]
+sprite_frames = SubResource("SpriteFrames_31cv2")
+animation = &"jump"
