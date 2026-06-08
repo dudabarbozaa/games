@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cebis1qr37vte"]
 
-[ext_resource type="Texture2D" uid="uid://c12l8r7chfeve" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/stoneHalfLeft.png" id="1_ke8ey"]
-[ext_resource type="Texture2D" uid="uid://nprow2s1btd" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/stoneHalfMid.png" id="2_14w5t"]
-[ext_resource type="Texture2D" uid="uid://x3eonaai5njv" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/stoneHalfRight.png" id="3_sfnd5"]
+[ext_resource type="Texture2D" uid="uid://dr4mvv5oc4wls" path="res://assets/kenney_platformer-art-deluxe/Candy expansion/Tiles/cakeHalfAltLeft.png" id="1_ke8ey"]
+[ext_resource type="Texture2D" uid="uid://dvqtifc40eirm" path="res://assets/kenney_platformer-art-deluxe/Candy expansion/Tiles/cakeHalfAltMid.png" id="2_14w5t"]
+[ext_resource type="Texture2D" uid="uid://5etdou73q4xj" path="res://assets/kenney_platformer-art-deluxe/Candy expansion/Tiles/cakeHalfAltRight.png" id="3_sfnd5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ke8ey"]
 size = Vector2(369, 12.412586)

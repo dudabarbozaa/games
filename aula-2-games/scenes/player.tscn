@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dncc0wawa4ifc"]
 
 [ext_resource type="Script" uid="uid://d25ndkt2qsinj" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://djhlal8fsj5c3" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_stand.png" id="2_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://daamrkbirb68w" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_front.png" id="3_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://cdogkqe57o58e" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_jump.png" id="3_oprun"]
 [ext_resource type="Texture2D" uid="uid://b226xvl45xb3o" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk01.png" id="4_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://dxwpuam3o5jfx" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p3_walk/PNG/p3_walk02.png" id="5_qfm1y"]
@@ -23,11 +23,11 @@ height = 86.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_f1ej7")
+"texture": ExtResource("3_a8ls1")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 120.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -86,4 +86,4 @@ shape = SubResource("CapsuleShape2D_dqkch")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=390229564]
 sprite_frames = SubResource("SpriteFrames_31cv2")
-animation = &"jump"
+animation = &"idle"
