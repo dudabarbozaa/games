@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://2adrhhenqpro"]
+
+[ext_resource type="Texture2D" uid="uid://c0bk331urje3b" path="res://ChatGPT_Image_9_de_jun._de_2026__10_13_02-removebg-preview.png" id="1_v3h06"]
+
+[node name="chave" type="CharacterBody2D" unique_id=1204506259]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1112223074]
+texture = ExtResource("1_v3h06")
