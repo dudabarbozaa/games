@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ci0qkar764y12"]
+
+[ext_resource type="Texture2D" uid="uid://bepktaprkotby" path="res://assets/kenney_platformer-art-deluxe/Base pack/Items/star.png" id="1_rwqht"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kahox"]
+size = Vector2(27, 28.5)
+
+[node name="Coin" type="Area2D" unique_id=1887832566]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=394740399]
+texture = ExtResource("1_rwqht")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=146372782]
+position = Vector2(-0.5, 0.25)
+shape = SubResource("RectangleShape2D_kahox")

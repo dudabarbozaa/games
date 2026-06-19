@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bm2aimol2hsvd" path="res://batatudo.tscn" id="6_pa8r4"]
 [ext_resource type="Texture2D" uid="uid://rowths64j8hb" path="res://ChatGPT_Image_9_de_jun._de_2026__07_59_25-removebg-preview.png" id="7_15mv3"]
 [ext_resource type="Texture2D" uid="uid://c0bk331urje3b" path="res://ChatGPT_Image_9_de_jun._de_2026__10_13_02-removebg-preview.png" id="8_15mv3"]
+[ext_resource type="PackedScene" uid="uid://ci0qkar764y12" path="res://scenes/coin.tscn" id="9_e3sih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("2_rus8k")
@@ -4797,10 +4798,10 @@ _data = {
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=982079737]
 z_index = -10
-offset_left = -87369.0
-offset_top = -31232.0
-offset_right = 72314.0
-offset_bottom = 57956.0
+offset_left = -87404.0
+offset_top = -31338.0
+offset_right = 72279.0
+offset_bottom = 57850.0
 texture = ExtResource("1_5xbjy")
 
 [node name="mapa" type="Node2D" parent="." unique_id=630976585]
@@ -4853,3 +4854,9 @@ texture = ExtResource("7_15mv3")
 position = Vector2(8604, 490.00006)
 scale = Vector2(0.37745082, 0.35023326)
 texture = ExtResource("8_15mv3")
+
+[node name="coins" type="Node2D" parent="." unique_id=1752359450]
+z_index = 2
+
+[node name="Coin" parent="coins" unique_id=1887832566 instance=ExtResource("9_e3sih")]
+position = Vector2(462, 383)
