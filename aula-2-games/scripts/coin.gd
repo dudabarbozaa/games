@@ -9,8 +9,8 @@ signal collected
 # automaticamente as informações do nó que entrou nessa área, registradas
 # pelo parâmetro body
 func _on_body_entered(body: Node2D) -> void:
-	print(body)# Se o nome do nó que entrou na área for Player, execute as ações
-	if body.name == "player":
+		# Se o nome do nó que entrou na área for Player, execute as ações
+	if body.name == "Player":
 		# printe no console "+1"
 		print("+1")
 		  # Emita o sinal collected (criado no início do código)

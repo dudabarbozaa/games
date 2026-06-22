@@ -2,9 +2,10 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -500.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+var moedasColetadas = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -40,3 +41,15 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	# Arquivo: player.gd
+
+#... restante do código
+
+func die():
+	# get_tree() — acessa o SceneTree, que é o gerenciador geral do jogo. 
+	# É por ele que você controla cenas, pausa o jogo, fecha o jogo, etc.
+	
+	# .reload_current_scene() — reinicia a cena atual do zero, como se 
+	# você tivesse fechado e reaberto ela.
+	get_tree().reload_current_scene()
