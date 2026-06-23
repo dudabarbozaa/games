@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c0bk331urje3b" path="res://ChatGPT_Image_9_de_jun._de_2026__10_13_02-removebg-preview.png" id="8_15mv3"]
 [ext_resource type="PackedScene" uid="uid://ci0qkar764y12" path="res://scenes/coin.tscn" id="9_e3sih"]
 [ext_resource type="PackedScene" uid="uid://dhle0dkntb8ao" path="res://scenes/killzone.tscn" id="10_2y5yt"]
+[ext_resource type="FontFile" uid="uid://cs72yx323c5vj" path="res://assets/Fonte/PlayfairDisplay-VariableFont_wght.ttf" id="11_2os1m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("2_rus8k")
@@ -4798,14 +4799,18 @@ _data = {
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r4msk"]
 distance = -846.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_r4msk"]
+font = ExtResource("11_2os1m")
+font_color = Color(0, 0, 0, 1)
+
 [node name="Level1" type="Node2D" unique_id=1784405643]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=982079737]
 z_index = -10
-offset_left = -87404.0
-offset_top = -31338.0
-offset_right = 72279.0
-offset_bottom = 57850.0
+offset_left = -87328.0
+offset_top = -31246.0
+offset_right = 72355.0
+offset_bottom = 57942.0
 texture = ExtResource("1_5xbjy")
 
 [node name="mapa" type="Node2D" parent="." unique_id=630976585]
@@ -4824,7 +4829,7 @@ tile_map_data = PackedByteArray("AAD0/wwAAAACAAMAAADy/wQAAAADAAIAAADz/wQAAAADAAI
 tile_set = SubResource("TileSet_4nkto")
 
 [node name="doces" type="TileMapLayer" parent="mapa" unique_id=804916883]
-tile_map_data = PackedByteArray("AABGAA0AAAANAAAAAAB9ABoAAAAMAAAAAABTABwAAAAHAAYAAABZABgAAAAHAAYAAABUABMAAAAHAAYAAABkABsAAAAHAAYAAABgABMAAAAHAAYAAAA=")
+tile_map_data = PackedByteArray("AABTABwAAAAHAAYAAABZABgAAAAHAAYAAABUABMAAAAHAAYAAABkABsAAAAHAAYAAABgABMAAAAHAAYAAAA=")
 tile_set = SubResource("TileSet_15mv3")
 
 [node name="plataforma" parent="." unique_id=483916112 instance=ExtResource("4_5xbjy")]
@@ -4870,3 +4875,22 @@ position = Vector2(-204, 477)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1447295970]
 position = Vector2(-10, 370)
 shape = SubResource("WorldBoundaryShape2D_r4msk")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1054185329]
+
+[node name="Control" type="Control" parent="HUD" unique_id=1464543557]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthLabel" type="Label" parent="HUD/Control" unique_id=1036575674]
+layout_mode = 0
+offset_left = 1056.0
+offset_top = 42.0
+offset_right = 1128.0
+offset_bottom = 65.0
+text = "Hit Points"
+label_settings = SubResource("LabelSettings_r4msk")

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c7ckpix8o8163"]
+
+[ext_resource type="PackedScene" uid="uid://22o2u6pcbhd7" path="res://scenes/hud.tscn" id="1_c4rma"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=994728313]
+
+[node name="Control" type="Control" parent="." unique_id=1232767714]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = 12.0
+offset_right = 29.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthLabel" type="Label" parent="Control" unique_id=706859555]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1031101881]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 39.0
+offset_right = 101.0
+offset_bottom = 79.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=201625304]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 14.0
+offset_right = 26.0
+offset_bottom = 41.0
+
+[node name="HUD" parent="." unique_id=58193652 instance=ExtResource("1_c4rma")]

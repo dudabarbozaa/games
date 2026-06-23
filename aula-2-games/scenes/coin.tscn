@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ci0qkar764y12"]
 
 [ext_resource type="Texture2D" uid="uid://de6yjlve6102g" path="res://assets/kenney_platformer-art-deluxe/Base pack/HUD/hud_coins.png" id="1_rwqht"]
-[ext_resource type="Texture2D" uid="uid://bmsoo3wbv3yom" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/window.png" id="2_i64fm"]
 
 [sub_resource type="GDScript" id="GDScript_kahox"]
 script/source = "# Arquivo: coin.gd
@@ -24,22 +23,20 @@ signal collected
 func _on_body_entered(body: Node2D) -> void:
 		# Se o nome do nó que entrou na área for Player, execute as ações
 	if body.name == \"Player\":
-		# printe no console \"+1\"
-		body.moedasColetadas +=1
-		print(body.moedasColetadas)
+	# printe no console \"+1\"
+		print(\"+1\")
 		  # Emita o sinal collected (criado no início do código)
 		collected.emit()
 	  # Deixa a moeda invisível
 		sprite_2d.visible = false
 	  # Desabilita o colisor (set_deferred é um modo mais seguro do que acessar 
-	  # diretamente a propriedade disabled)
-	collision_shape_2d.set_deferred(\"disabled\", true)
+	  # diretamente a propriedade disabled)		collision_shape_2d.set_deferred(\"disabled\", true)
 			# Ativa as partículas
-	particles.emitting = true
+		particles.emitting = true
 			# Espera as partículas acabarem antes de seguir
 			# O await pausa a execução da função até que o sinal finished seja emitido 
 			# — sem travar o jogo, pausando somente a função de forma assíncrona.
-	await particles.finished
+		await particles.finished
 	  # Remova a moeda da cena
 	queue_free()
 "
@@ -47,9 +44,9 @@ func _on_body_entered(body: Node2D) -> void:
 [sub_resource type="CircleShape2D" id="CircleShape2D_2os1m"]
 radius = 27.018513
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_r4msk"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2y5yt"]
 particle_flag_disable_z = true
-velocity_pivot = Vector3(0, -1, 0)
+direction = Vector3(0, -1, 0)
 initial_velocity_min = 80.0
 initial_velocity_max = 150.0
 gravity = Vector3(0, 98, 0)
@@ -68,12 +65,9 @@ shape = SubResource("CircleShape2D_2os1m")
 
 [node name="Particles" type="GPUParticles2D" parent="." unique_id=1487961416]
 emitting = false
-amount = 5
-amount_ratio = 0.4
-texture = ExtResource("2_i64fm")
 lifetime = 0.4
 one_shot = true
 explosiveness = 1.0
-process_material = SubResource("ParticleProcessMaterial_r4msk")
+process_material = SubResource("ParticleProcessMaterial_2y5yt")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
